@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+  height: 100vh;
+  overflow: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://priority5.com/wp-content/uploads/2022/01/priority-5-map.jpg")
+      no-repeat center top/cover;
+}
+
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: spin 20s linear infinite;
+  }
+}
+
+.header {
+  background-color: #3266cf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  height: 10vh;
+}
+
+.link {
+  color: #61dafb;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#routes {
+  height: 90vh;
+  padding: 0;
+}
