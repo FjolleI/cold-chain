@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import Paper from "@mui/material/Paper";
 import { ethers } from "ethers";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ColdChain from "../artifacts/contracts/ColdChain.sol/ColdChain.json";
 
 import Timeline from "@mui/lab/Timeline";
@@ -26,8 +26,7 @@ const DisplayStatus = () => {
   async function requestAccount() {
     await window.ethereum.request({ method: "eth_requestAccounts" });
   }
-
-  async function getStatus() {
+  const getStatus = async () => {
     if (typeof window.ethereum !== "undefined") {
       requestAccount();
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -47,7 +46,10 @@ const DisplayStatus = () => {
         console.log("Error: ", err);
       }
     }
-  }
+  };
+  useEffect(() => {
+    getStatus();
+  }, [id]);
 
   function convertTimestamp(t) {
     var intTimestamp = parseInt(t, 16);
@@ -57,7 +59,7 @@ const DisplayStatus = () => {
 
   return (
     <center>
-      <div style={{ padding: "2.5%" }}>
+      <div style={{ marginTop: "80px" }}>
         <div>
           <Paper
             sx={{
@@ -89,7 +91,7 @@ const DisplayStatus = () => {
           </Box>
         ) : (
           <div>
-            <h1>Product Status</h1>
+            <h1>Drug Status</h1>
             <Timeline position="left">
               {data.map((row, iterator) => (
                 <TimelineItem key={iterator}>

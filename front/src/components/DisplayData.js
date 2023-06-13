@@ -22,7 +22,7 @@ import ColdChain from "../artifacts/contracts/ColdChain.sol/ColdChain.json";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: "#E65100",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -167,7 +167,7 @@ const DisplayData = () => {
   return (
     <>
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "3%" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "80px" }}
       >
         <Paper
           elevation={3}
@@ -191,7 +191,7 @@ const DisplayData = () => {
       <div style={{ overflow: "auto" }}>
         <TableContainer
           component={Paper}
-          sx={{ width: "50%", margin: "auto", marginTop: "5%" }}
+          sx={{ width: "40%", margin: "auto", marginTop: "16px" }}
         >
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -199,9 +199,7 @@ const DisplayData = () => {
                 <StyledTableCell>SN</StyledTableCell>
                 <StyledTableCell align="left">Temperature</StyledTableCell>
                 <StyledTableCell align="left">Humidity</StyledTableCell>
-                <StyledTableCell align="right">
-                  Heat Index(Feels like)
-                </StyledTableCell>
+                <StyledTableCell align="left">Heat Index</StyledTableCell>
               </StyledTableRow>
             </TableHead>
             <TableBody>
@@ -226,7 +224,7 @@ const DisplayData = () => {
                   <StyledTableCell align="left">
                     {parseInt(row.humidity._hex)}%
                   </StyledTableCell>
-                  <StyledTableCell align="right">
+                  <StyledTableCell align="left">
                     {parseInt(row.heatIndex._hex)}°C
                   </StyledTableCell>
                 </StyledTableRow>

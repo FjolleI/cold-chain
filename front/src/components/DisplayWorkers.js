@@ -15,7 +15,7 @@ import ColdChain from "../artifacts/contracts/ColdChain.sol/ColdChain.json";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: "#E65100",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {

@@ -2,9 +2,7 @@ body {
   text-align: center;
   height: 100vh;
   overflow: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://priority5.com/wp-content/uploads/2022/01/priority-5-map.jpg")
-      no-repeat center top/cover;
+  background-color: rgba(55, 49, 49, 0.7);
 }
 
 .logo {
