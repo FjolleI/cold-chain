@@ -8,6 +8,7 @@ import DisplayStatus from "./components/DisplayStatus.js";
 import DisplayWorkers from "./components/DisplayWorkers.js";
 import Home from "./components/Home.js";
 import ResponsiveAppBar from "./components/ResponsiveAppBar.js";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
+      <SpeedInsights />
     </div>
   );
 }
